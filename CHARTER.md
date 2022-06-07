@@ -1,7 +1,12 @@
-# {{ New Group Name }} Charter
+# RERI (RAS Error-record Register Interface) TG Charter
 
-The information in this file should be created as part of the group formation and approved by your sponsoring group.  See the [Chairs Best Practices policy](https://docs.google.com/document/d/1rtXskVd7YyFq74tQ2OrInyM_-OQa228R5UZs5Pm3Vz0/) for more details.
+The RERI Task Group shall develop a specification to augment RAS features in RISC-V SOC hardware to standardize reporting and logging of errors by means of a memory-mapped register interface to enable error detection, provide the facility to log the detected errors (including their severity, nature, and location), and configuring means to report the error to a handler component. The specification shall support reporting attempts to consume corrupted data by an ultimate consumer component. Additionally, the specification shall support software-initiated error logging, reporting, and testing of error handlers. Lastly, the specification shall provide maximal flexibility to implement error handling and shall co-exist with RAS frameworks defined by other standards such as PCIe, CXL, etc.
 
-A good Task Group (TG) charter describes how it achieves filling in a gap defined by the Special Interest Group (SIG) or Committee that spawned it (directly or dotted line). It lists the specific small set of  deliverables it will deliver.
+The RERI specification shall not prescribe:
 
-A SIG is an extension of a Committee, in that its only deliverables are strategy, gaps, and prioritizations, and helping spawn other SIGs or TGs to fill the gaps. A good SIG charter spells out the small set of topic areas their strategy will address along with its responsibilities as laid out in this bullet.
+ - the level of reliability, availability, and serviceability in the system
+ - methods for error detection and/or correction and testing of such methods
+ - the behavior of the components on detecting the errors
+ - behavior of components in the system that choose not to implement this specification
+
+The RERI TG shall validate its specification by prototyping the behavior using QEMU and Linux.
